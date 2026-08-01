@@ -1,75 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Mom ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            margin:0;
-            font-family:Arial, sans-serif;
-            background:linear-gradient(to bottom,#ffe6f0,#fff5f8);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-        }
+<title>For My Mom ❤️</title>
 
-        .card{
-            background:white;
-            padding:40px;
-            border-radius:25px;
-            width:80%;
-            max-width:600px;
-            box-shadow:0 10px 30px rgba(0,0,0,.15);
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(#fff0f5, #fffaf0);
+    color: #5a3a3a;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-        h1{
-            color:#e91e63;
-        }
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
 
-        p{
-            font-size:20px;
-            line-height:1.7;
-            color:#555;
-        }
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    animation: fade 2s;
+}
 
-        button{
-            margin-top:20px;
-            padding:15px 30px;
-            border:none;
-            border-radius:50px;
-            background:#e91e63;
-            color:white;
-            font-size:18px;
-            cursor:pointer;
-        }
+h1 {
+    color: #d63384;
+    font-size: 40px;
+}
 
-        button:hover{
-            background:#d81b60;
-        }
-    </style>
+h2 {
+    color: #c2185b;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+button {
+    background: #d63384;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ad1457;
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 25px;
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+
 </head>
 
 <body>
 
+<section>
 <div class="card">
-<h1>❤️ I Love You, Mom ❤️</h1>
+<h1>❤️ For My Mom ❤️</h1>
 
 <p>
-Thank you for everything you do for me.
-I may not say it enough, but I appreciate your love,
-your strength, and your kindness every single day.
-You will always have a special place in my heart.
+A little website made just to remind you how loved you are.
 </p>
 
-<button onclick="alert('I love you so much, Mom! ❤️')">
-Click Here ❤️
-</button>
+<button onclick="openLetter()">Open My Letter 💌</button>
+
+<p id="letter" class="hidden">
+Dear Mom,<br><br>
+
+Thank you for everything you do for me.
+Your love, strength, and kindness mean more than words can explain.
+
+Even when I don't say it enough, I appreciate you.
+You are one of the biggest blessings in my life.
+
+I love you so much. ❤️
+</p>
 
 </div>
+</section>
+
+
+<section>
+<div class="card">
+
+<h2>🌸 Why I Love You 🌸</h2>
+
+<p>
+❤️ Your kindness<br>
+❤️ Your strength<br>
+❤️ Your patience<br>
+❤️ The way you care for our family<br>
+❤️ Everything you sacrifice for me
+</p>
+
+</div>
+</section>
+
+
+<section>
+<div class="card">
+
+<h1>💖 Thank You Mom 💖</h1>
+
+<p>
+No matter where life takes me,
+I will always be grateful to have you as my mom.
+
+I love you forever. 🌷
+</p>
+
+</div>
+</section>
+
+
+<script>
+
+function openLetter(){
+    document.getElementById("letter").style.display="block";
+}
+
+
+function createHeart(){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,800);
+
+</script>
+
 
 </body>
 </html>
