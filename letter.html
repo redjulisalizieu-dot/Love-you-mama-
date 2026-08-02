@@ -19,51 +19,55 @@
 <div class="page">
 
 
-<div class="envelope">
+<h1>
+💌 Une lettre pour toi Maman
+</h1>
 
-<div class="flap"></div>
 
-<div class="seal">
+<div class="small-envelope" id="letterBox">
+
+
+<div class="small-flap"></div>
+
+
+<div class="small-seal">
 ❤️
 </div>
 
+
 </div>
 
 
+
 <button onclick="ouvrir()">
-Ouvrir ma lettre 💌
+Ouvrir la lettre 💌
 </button>
 
 
 
-<div id="lettre" style="display:none;">
+<div id="messageLettre" class="letter hidden-letter">
 
-<div class="letter">
 
-<h1>
-Pour ma maman ❤️
-</h1>
+<h2>
+Ma chère Maman ❤️
+</h2>
 
 
 <p>
 
-Chère Maman,
+Je voulais créer cette petite surprise pour te rappeler à quel point tu es importante pour moi.
 
 <br><br>
 
-Je voulais créer cette petite surprise pour te dire quelque chose que je ne dis peut-être pas assez souvent.
+Merci pour ton amour, tes conseils, ta patience et tout ce que tu fais chaque jour.
 
 <br><br>
 
-Merci pour ton amour, ta patience, ta force et tout ce que tu fais pour moi.
+Même si je ne le dis pas toujours, je t'apprécie énormément.
 
 <br><br>
 
-Tu es une personne très importante dans ma vie et je suis reconnaissante de t'avoir comme maman.
-
-<br><br>
-
-Je t'aime plus que les mots peuvent l'expliquer. ❤️
+Je t'aime très fort Maman ❤️
 
 <br><br>
 
@@ -76,7 +80,12 @@ Ta fille 💜
 
 </div>
 
-</div>
+
+
+<a href="menu.html" class="back-button">
+⬅ Retour aux cœurs
+</a>
+
 
 
 </div>
@@ -88,7 +97,12 @@ Ta fille 💜
 
 function ouvrir(){
 
-document.getElementById("lettre").style.display="block";
+document.getElementById("messageLettre")
+.classList.add("show-letter");
+
+
+document.getElementById("letterBox")
+.classList.add("opened");
 
 }
 
