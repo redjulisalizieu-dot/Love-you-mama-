@@ -1,1 +1,138 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #eadcff, #cfa8ff);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #5a3b70;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Sparkles background */
+.sparkle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #fff7d6;
+    border-radius: 50%;
+    animation: sparkle 3s infinite;
+}
+
+@keyframes sparkle {
+    0%,100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+/* Envelope */
+.envelope {
+    width: 260px;
+    height: 170px;
+    background: linear-gradient(#f7d774, #d9a92e);
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.2);
+    animation: drop 2s ease;
+}
+
+@keyframes drop {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-top: 90px solid #ffe69a;
+    transform-origin: top;
+}
+
+.seal {
+    position: absolute;
+    top: 70px;
+    left: 105px;
+    width: 50px;
+    height: 50px;
+    background: #c94c7c;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* Teddy */
+.teddy {
+    font-size: 80px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Buttons */
+button {
+    margin-top: 30px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 40px;
+    background: #9b59b6;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7d3c98;
+}
+
+/* Letter */
+.letter {
+    background: white;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    animation: openLetter 2s;
+}
+
+@keyframes openLetter {
+    from {
+        opacity:0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
