@@ -230,7 +230,53 @@ button:hover {
 
     to {
         transform:translateY(0);
-        opacity:1;
+        opacity:1
+        .password-box {
+
+background:white;
+border-radius:30px;
+padding:30px;
+display:flex;
+gap:30px;
+align-items:center;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+animation:pageFade 1.5s;
+
+}
+
+
+.password-image {
+
+font-size:90px;
+background:#eadcff;
+padding:30px;
+border-radius:30px;
+
+}
+
+
+.password-content input {
+
+padding:15px;
+border-radius:30px;
+border:2px solid #d9a92e;
+font-size:18px;
+text-align:center;
+width:200px;
+
+}
+
+
+@media(max-width:600px){
+
+.password-box{
+
+flex-direction:column;
+
+}
+
+}
     }
 
 }
+w
