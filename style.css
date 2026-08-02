@@ -272,6 +272,7 @@ width:200px;
 .password-box{
 
 flex-direction:column;
+    
 
 }
 
@@ -280,3 +281,285 @@ flex-direction:column;
 
 }
 w
+.welcome-card {
+
+background:white;
+padding:45px;
+border-radius:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+animation:welcome 2s ease;
+
+}
+
+
+.welcome-card h1 {
+
+font-size:45px;
+color:#9b59b6;
+
+}
+
+
+.big-heart {
+
+font-size:100px;
+animation:heartBeat 1.5s infinite;
+
+}
+
+
+@keyframes welcome {
+
+from {
+
+opacity:0;
+transform:scale(.7);
+
+}
+
+to {
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+.hearts {
+
+display:flex;
+gap:40px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+
+}
+
+
+.heart-card {
+
+font-size:90px;
+cursor:pointer;
+display:flex;
+flex-direction:column;
+align-items:center;
+animation:heartFloat 2s infinite;
+
+transition:.4s;
+
+}
+
+
+.heart-card span {
+
+font-size:18px;
+color:#7d3c98;
+margin-top:10px;
+
+}
+
+
+.heart-card:hover {
+
+transform:scale(1.25);
+
+}
+
+
+@keyframes heartFloat {
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+.small-envelope {
+
+width:260px;
+height:170px;
+background:#f4c542;
+border-radius:15px;
+position:relative;
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+margin:30px;
+
+}
+
+
+.small-flap {
+
+position:absolute;
+width:0;
+height:0;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-top:90px solid #ffe69a;
+transition:1s;
+transform-origin:top;
+
+}
+
+
+.small-seal {
+
+position:absolute;
+top:70px;
+left:105px;
+font-size:40px;
+
+}
+
+
+.opened .small-flap {
+
+transform:rotateX(180deg);
+
+}
+
+
+
+.hidden-letter {
+
+opacity:0;
+transform:translateY(50px);
+transition:1.5s;
+
+}
+
+
+.show-letter {
+
+opacity:1;
+transform:translateY(0);
+
+}
+.gallery {
+
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin:40px;
+
+}
+
+
+
+.photo-card {
+
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+animation:photoAppear 1.5s;
+}
+
+
+
+.photo-card img {
+
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:5px;
+
+}
+
+
+
+.photo-card p {
+
+font-size:18px;
+
+}
+
+
+
+.rotate-left {
+
+transform:rotate(-5deg);
+
+}
+
+
+
+.rotate-right {
+
+transform:rotate(5deg);
+
+}
+
+
+
+@keyframes photoAppear {
+
+from {
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to {
+
+opacity:1;
+
+}
+
+}
+.tv {
+
+background:#8e5bb7;
+padding:25px;
+border-radius:35px;
+box-shadow:0 20px 40px rgba(0,0,0,.3);
+animation:tvGlow 3s infinite;
+
+}
+
+
+.screen {
+
+background:black;
+padding:15px;
+border-radius:20px;
+
+}
+
+
+.screen iframe {
+
+width:320px;
+height:200px;
+border-radius:15px;
+
+}
+
+
+
+.buttons {
+
+margin-top:15px;
+font-size:25px;
+
+}
+
+
+
+@keyframes tvGlow {
+
+50% {
+
+transform:scale(1.03);
+
+}
+
+}
