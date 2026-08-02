@@ -134,5 +134,63 @@ button:hover {
     to {
         opacity:1;
         transform: translateY(0);
-    }
+        /* Heart menu animation */
+.heart-button {
+    font-size: 70px;
+    background: transparent;
+    animation: heartBeat 1.5s infinite;
+    cursor: pointer;
+    border: none;
 }
+
+.heart-button:hover {
+    transform: scale(1.2);
+}
+
+
+@keyframes heartBeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* Soft fade when pages open */
+.page {
+    animation: pageFade 1.5s ease;
+}
+
+
+@keyframes pageFade {
+
+    from {
+        opacity:0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Back button */
+.back-button {
+    background:#d63384;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:25px;
+}
+    }
+}w
