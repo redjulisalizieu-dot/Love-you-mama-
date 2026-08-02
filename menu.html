@@ -15,78 +15,71 @@
 
 <body>
 
+
 <div class="page">
 
-<div class="letter">
 
 <h1>
 Choisis un cœur ❤️
 </h1>
 
+
 <p>
-Chaque cœur cache une petite surprise pour toi 💜
+Chaque cœur cache une surprise pour toi 💜
 </p>
 
 
-<div style="
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
-">
+
+<div class="hearts">
 
 
-<button onclick="ouvrirLettre()" style="font-size:50px;">
+<div class="heart-card" onclick="lettre()">
 ❤️
-</button>
+<span>Lettre</span>
+</div>
 
 
-<button onclick="ouvrirPhotos()" style="font-size:50px;">
+<div class="heart-card" onclick="photos()">
 🩷
-</button>
+<span>Photos</span>
+</div>
 
 
-<button onclick="ouvrirChanson()" style="font-size:50px;">
+<div class="heart-card" onclick="chanson()">
 💜
-</button>
+<span>Chanson</span>
+</div>
 
 
 </div>
 
 
-<p>
-💌 Lettre &nbsp;&nbsp; 📸 Photos &nbsp;&nbsp; 🎵 Chanson
-</p>
-
 
 </div>
 
-</div>
 
 
 <script>
 
-
-function ouvrirLettre(){
+function lettre(){
 
 window.location.href="letter.html";
 
 }
 
 
-function ouvrirPhotos(){
+function photos(){
 
 window.location.href="gallery.html";
 
 }
 
 
-function ouvrirChanson(){
+function chanson(){
 
 window.location.href="song.html";
 
 }
-
 
 </script>
 
